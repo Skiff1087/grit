@@ -1,0 +1,34 @@
+@use "../mixins/" as *;
+@use "../presets/" as *;
+
+.btn {
+  font-size: 1.125rem;
+  letter-spacing: 0.1em;
+  height: $gap-x3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  transition: 1s;
+
+  &:hover,
+  &focus {
+    background-color: $color-accent;
+  }
+  &--primary {
+    background-color: rgba($color-primary, 0.8);
+    border: 2px solid $color-primary;
+    @include sm-min {
+      width: 350px;
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+  &--light {
+    width: 250px;
+    border: 2px solid $color-light;
+    background-color: rgba($color-light, 0.1);
+  }
+}

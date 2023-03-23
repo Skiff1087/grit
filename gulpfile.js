@@ -131,9 +131,15 @@ function createStructure() {
   }, 1000));
 }
 
+function watchInDevMode() {
+  syncInit();
+  watch(PATH.scssFiles, series(scssDev));
+  watch(PATH.htmlFiles, sync);
+  watch(PATH.jsFiles, sync);
+  watch(PATH.cssFile, sync);
+}
+
 task('comb', series(comb));
 task('scss', series(scss));
-task('dev', series(scssDev));
-task('min', series(scssMin));
-task('cs', series(createStructure));
 task('watch', watchFiles);
+task('dev', watchInDevMode);

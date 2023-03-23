@@ -1,61 +1,25 @@
 // @use "../../libs/normalize.css/normalize";
 
-// @use "common/typography";
-// @use "common/classes";
+@use "presets/skin";
+@use "presets/variables";
 
-// @use "components/header/header";
-// @use "components/header/header-overlay";
-// @use "components/header/header-menu";
-// @use "components/header/header-logo";
-// @use "components/header/header-navbar";
-// @use "components/header/header-content";
-// @use "components/sections/skills/skills";
-// @use "components/sections/skills/skill-item";
-// @use "components/sections/section-about";
-// @use "components/sections/section-form";
-// @use "components/sections/section-posts";
+@use "mixins/mixins";
+@use "mixins/mixins-media";
+@use "mixins/extends";
 
-// @use "components/footer/footer";
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@use "common/typography";
+@use "common/classes";
 
-html {
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  overflow-y: scroll;
-}
-body {
-  margin: 0;
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-.header {
-  background-color: #2d3651;
-  min-height: 100vh;
-  background-image: url(../img/img-header.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-.header-overlay {
-  position: absolute;
-  background-color: #2d3651;
-  inset: 0;
-  opacity: 0.8;
-}
-.header-content {
-  position: relative;
-  z-index: 1;
-}
-.header-content__title {
-  margin: 0;
-}
+@use "components/header/header";
+@use "components/header/header-overlay";
+@use "components/header/header-menu";
+@use "components/header/header-logo";
+@use "components/header/header-navbar";
+@use "components/header/header-content";
+@use "components/sections/skills/skills";
+@use "components/sections/skills/skill-item";
+@use "components/sections/section-about";
+@use "components/sections/section-form";
+@use "components/sections/section-posts";
 
-.header-menu {
-  position: relative;
-  z-index: 1;
-}
+@use "components/footer/footer";
