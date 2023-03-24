@@ -1,10 +1,12 @@
 # Список команди
 
-- git init
+- clear (очистити весь список)
+- git init ????
 - git config
 - git status
-- git add .
-- git commit -m "ім'я коміта"
-  - git commit -a -m "ім'я коміта"
-- git restore --staged "ім'я файлу"
-- git restore .
+- git add . (додати всі файли)
+- git commit -m "ім'я коміта" (додати коміт)
+  - git commit -a -m "ім'я коміта" (не користуватись)
+- git restore --staged "ім'я файлу" (відміна змін файлу)
+- git restore . (відміна останнього коміта)
+- git log (краще не користуватись подивитись коміти)
