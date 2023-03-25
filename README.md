@@ -28,3 +28,6 @@
 - git remote add origin (https://github.com/Skiff1087/grit.git) (додавання нового репозиторія)
 - git push -u origin master (пушим проєкт в репозіторій)
 - git push (після першого пуша)
+- git push -u origin (ім'я гілки) (такою командою пушим всі гілки які нам потрібні)
+- git clone (https://github.com/Skiff1087/grit.git) (клонуем проєкт на любий комп)
+- git pull (заливаєм зміни які були зроблені на іншому компі)
