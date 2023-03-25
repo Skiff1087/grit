@@ -1,6 +1,7 @@
 # Список команди
 
 - clear (очистити весь список)
+- git --version (взнати версію гіта)
 - git init (створює в новому проєкті GIT)
 - git config --list
 - git status
