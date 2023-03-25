@@ -26,3 +26,5 @@
 - git remote -v (подивитись на якому репозиторії знаходишся)
 - git remote rm origin (видалити репозиторій)
 - git remote add origin (https://github.com/Skiff1087/grit.git) (додавання нового репозиторія)
+- git push -u origin master (пушим проєкт в репозіторій)
+- git push (після першого пуша)
