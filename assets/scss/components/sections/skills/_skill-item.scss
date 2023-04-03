@@ -3,11 +3,14 @@
 
 .skill-item {
   position: relative;
+
   display: grid;
-  align-items: center;
-  padding: $gap;
-  justify-items: center;
   overflow: hidden;
+  align-items: center;
+
+  padding: $gap;
+
+  justify-items: center;
   &:hover .skill-item__link {
     color: $color-accent;
   }
@@ -20,31 +23,46 @@
   &__titel {
     position: absolute;
     z-index: 1;
+
     margin: 0;
-    inset: 0;
-    font-size: 1.25rem;
+
     letter-spacing: 0.1em;
+
+    @include md-min {
+      font-size: 1.25rem;
+    }
+    @include md {
+      font-size: 1.125rem;
+    }
+    inset: 0;
   }
   &__link {
     display: flex;
     align-items: center;
     justify-content: center;
+
     height: 100%;
     padding: $gap;
+
     transition: 1s color;
   }
   &__image {
     position: absolute;
-    inset: 0;
+
+    transition: transform 1s;
+
     background-color: $color-primary;
     background-position: 50% 50%;
     background-size: cover;
-    transition: transform 1s;
+
+    inset: 0;
   }
   &__overlay {
     position: absolute;
-    inset: 0;
+
     transition: background-color 1s;
+
+    inset: 0;
   }
 }
 

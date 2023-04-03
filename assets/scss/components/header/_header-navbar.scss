@@ -2,29 +2,140 @@
 @use "../../presets/" as *;
 
 .header-navbar {
-  display: grid;
-  align-items: center;
-  justify-items: end;
+  @include md {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__btn {
+    position: relative;
+
+    width: 30px;
+    height: 22.5px;
+    margin: $gap 0;
+
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+
+    @include md-min {
+      display: none;
+    }
+
+    &-row {
+      position: absolute;
+
+      display: block;
+
+      width: 55%;
+      height: 3px;
+
+      transition: 0.25s ease-in-out;
+      transform: rotate(0deg);
+
+      opacity: 1;
+      background: $color-light;
+      &:nth-child(even) {
+        left: 50%;
+
+        border-radius: 0 3px 3px 0;
+      }
+      &:nth-child(odd) {
+        left: 0;
+
+        border-radius: 3px 0 0 3px;
+      }
+      &:nth-child(1),
+      &:nth-child(2) {
+        top: 0;
+      }
+      &:nth-child(3),
+      &:nth-child(4) {
+        top: 9px;
+      }
+      &:nth-child(5),
+      &:nth-child(6) {
+        top: 18px;
+      }
+    }
+    &--active span {
+      &:nth-child(1),
+      &:nth-child(6) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2),
+      &:nth-child(5) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(1) {
+        top: 2.34px;
+        left: 1.67px;
+      }
+      &:nth-child(2) {
+        top: 2.34px;
+        left: calc(50% - 1.68px);
+      }
+      &:nth-child(3) {
+        left: -50%;
+
+        opacity: 0;
+      }
+      &:nth-child(4) {
+        left: 100%;
+
+        opacity: 0;
+      }
+      &:nth-child(5) {
+        top: 14.5px;
+        left: 1.67px;
+      }
+      &:nth-child(6) {
+        top: 14.5px;
+        left: calc(50% - 1.68px);
+      }
+    }
+  }
   &__list {
-    margin: 0 -10px 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    width: 100%;
-    gap: $gap;
-    justify-content: end;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    @include md-min {
+      display: grid;
+      justify-content: end;
+
+      gap: $gap;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      @include unlist(0 -10px 0);
+    }
+    @include md {
+      position: absolute;
+      top: 100%;
+      right: $gap;
+
+      display: none;
+
+      background-color: rgba($color-gray-dark, 0.5);
+
+      @include unlist;
+      @include box-shadow;
+    }
+  }
+  &__item {
+    @include md {
+      margin: $gap;
+    }
   }
   &__link {
     display: block;
-    padding: $gap 10px;
-    font-size: 1.125rem;
+
     transition: 1s;
+
+    font-size: 1.125rem;
+
+    @include md-min {
+      padding: $gap $gap-sm;
+    }
+    @include md {
+      padding: $gap-sm $gap;
+    }
     &:hover {
       color: $color-accent;
     }
-  }
-  &__btn {
-    display: none;
   }
 }
