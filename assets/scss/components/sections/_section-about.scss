@@ -1,0 +1,38 @@
+@use "../../presets/" as *;
+@use "../../mixins/" as *;
+
+.about {
+  background-color: $color-gray-light;
+  &__container {
+    @extend %container;
+    display: grid;
+    grid-template-areas: "b1 b2";
+    grid-template-columns: repeat(2fr, 1fr);
+  }
+  &__contant {
+    display: grid;
+    &:nth-of-type(1) {
+      grid-area: b1;
+    }
+
+    &__title {
+    }
+    &__image {
+      display: grid;
+      &:nth-of-type(2) {
+        grid-area: b2;
+      }
+    }
+  }
+}
+
+.form {
+  background-color: $color-primary;
+  &__container {
+    @extend %container;
+  }
+  &-item {
+    &__input {
+    }
+  }
+}
