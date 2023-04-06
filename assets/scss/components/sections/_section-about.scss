@@ -12,8 +12,8 @@
     grid-template-columns: 1fr 271px;
     @extend %container;
   }
-  &__contant {
-  }
+  // &__content {
+  // }
   &__title {
     font-family: $font-header;
     font-size: 2.5rem;
