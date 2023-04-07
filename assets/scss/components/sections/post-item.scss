@@ -1,2 +1,26 @@
 @use "../../presets/" as *;
 @use "../../mixins/" as *;
+
+.post-item {
+  position: relative;
+
+  display: grid;
+  overflow: hidden;
+  align-items: center;
+
+  padding: $gap;
+
+  justify-items: center;
+
+  &__image {
+  }
+  &__titel {
+  }
+  &__content {
+  }
+}
+@for $i from 1 through 6 {
+  .post-item:nth-of-type(#{$i}) {
+    grid-area: v#{$i};
+  }
+}
