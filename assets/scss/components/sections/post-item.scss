@@ -2,6 +2,7 @@
 @use "../../mixins/" as *;
 
 .post-item {
+  background-color: red;
   position: relative;
 
   display: grid;
@@ -12,11 +13,32 @@
 
   justify-items: center;
 
+  &__container {
+    position: relative;
+    margin-top: 100px;
+  }
+
   &__image {
+    position: absolute;
+    inset: 0;
   }
   &__titel {
+    position: absolute;
+    inset: 0;
   }
   &__content {
+    position: absolute;
+    inset: 0;
+  }
+  &__action {
+    display: flex;
+    justify-content: center;
+
+    margin-top: $gap;
+
+    @include sm-min {
+      margin-bottom: $gap-lg;
+    }
   }
 }
 @for $i from 1 through 6 {
