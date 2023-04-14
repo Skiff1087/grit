@@ -32,3 +32,5 @@
 - git push -u origin (ім'я гілки) (такою командою пушим всі гілки які нам потрібні)
 - git clone (https://github.com/Skiff1087/grit.git) (клонуем проєкт на любий комп)
 - git pull (заливаєм зміни які були зроблені на іншому компі)
+
+- @include lg-min { } @include lg-md { } @include md-sm { } @include sm { }

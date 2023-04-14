@@ -50,11 +50,13 @@ h1 {
 
 p {
   font-family: $font-main;
-  font-size: 1.125rem;
   color: $color-gray;
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1.2em;
+  @include lg-min {
+    font-size: 1.125rem;
+  }
 }
 
 h3 {

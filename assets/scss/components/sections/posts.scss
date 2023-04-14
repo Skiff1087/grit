@@ -6,21 +6,45 @@
     display: grid;
     gap: $gap;
     padding-bottom: $gap;
-    grid-template-areas: "v1 v1 v2 v3" "v4 v5 v6 v6";
-    grid-template-columns: repeat(4, 1fr);
+
+    @include lg-min {
+      grid-template-areas: "v1 v1 v2 v3" "v4 v5 v6 v6";
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include lg-md {
+      grid-template-areas: "v1 v1 v2" "v3 v4 v4" "v5 v5 v6";
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+      grid-template-areas: "v1 v2" "v3 v4" "v5 v6";
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-areas: "v1" "v2" "v3" "v4" "v5" "v6";
+    }
   }
   &__container {
     @extend %container;
   }
   &__titel {
     font-family: $font-header;
-    font-size: 2.5rem;
     color: $color-primary;
     font-weight: bold;
     letter-spacing: 0.1em;
     line-height: 1.2em;
     position: relative;
     top: 0;
+    // @include lg-min {
+    //   font-size: 2.5rem;
+    // }
+    // @include lg-md {
+    //   font-size: 2rem;
+    // }
+    // @include md-sm {
+    // }
+    // @include sm {
+    //   font-size: 1.5rem;
+    // }
   }
   &__action {
     display: flex;

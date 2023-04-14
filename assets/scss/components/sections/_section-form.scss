@@ -6,9 +6,17 @@
   padding: 30px 0;
   &__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: $gap;
     @extend %container;
+    @include lg-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include lg-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
   }
   &-item {
     &__input {
@@ -44,5 +52,11 @@
     cursor: pointer;
     border-color: #ffffff;
     background-color: #d66926;
+  }
+}
+
+@include lg-sm {
+  .form-item:nth-of-type(1) {
+    grid-column: 1 / span 2;
   }
 }
